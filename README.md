@@ -45,8 +45,7 @@ The source dataset exhibited inconsistencies and discrepancies, necessitating co
   -	Conversely, employees in the lowest salary range (50k to 60k) constitute only 9 out of 54, indicating minimal impact on total attrition in this category.
 
 ### 4  Department wise Attrition count
-![HR 4](https://github.com/Naveena-Projects/HR-Analytics/assets/156399143/c3e283f9-45a3-46da-8edb-863cea1cde6b)
-
+![HR 4](https://github.com/Naveena-Projects/HR-Analytics/assets/156399143/a6c5793c-0b2f-4740-bee4-0b7cdd85aaaa)
   -	Finance department has the highest attrition rate at 54%.
   -	In contrast, the IT department experienced the maximum reduction with 18 employees leaving at an attrition rate of 35%. 
   -	The Marketing department lost 10 employees with an attrition rate of 33%, while all other departments have attrition rate exceeding 20%.
