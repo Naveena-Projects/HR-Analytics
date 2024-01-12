@@ -45,11 +45,14 @@ The source dataset exhibited inconsistencies and discrepancies, necessitating co
   -	Conversely, employees in the lowest salary range (50k to 60k) constitute only 9 out of 54, indicating minimal impact on total attrition in this category.
 
 ### 4  Department wise Attrition count
+![HR 4](https://github.com/Naveena-Projects/HR-Analytics/assets/156399143/c3e283f9-45a3-46da-8edb-863cea1cde6b)
+
   -	Finance department has the highest attrition rate at 54%.
   -	In contrast, the IT department experienced the maximum reduction with 18 employees leaving at an attrition rate of 35%. 
   -	The Marketing department lost 10 employees with an attrition rate of 33%, while all other departments have attrition rate exceeding 20%.
 
 ### 5  Department wise attrition statistics
+![HR 5](https://github.com/Naveena-Projects/HR-Analytics/assets/156399143/4f2824e9-3dda-4ad1-bce8-4e649beb818d)
   -	Finance department employees despite being highly paid and the most satisfied, have higher average work hours compared to the overall average.
   -	IT department, experiencing the highest attrition, had a high average work time of 43 hours.
   -	Both the IT and HR departments recorded the lowest training averaging around 17 hours.
@@ -58,10 +61,12 @@ The source dataset exhibited inconsistencies and discrepancies, necessitating co
   -	Employees in the marketing department, who are being paid lower than the overall average, are the least satisfied.
 
 ### 6  Relation between Attrition, Promotion and years of service
+![HR 6](https://github.com/Naveena-Projects/HR-Analytics/assets/156399143/988fa218-61e7-4112-a68a-58debd45dead)
   -	Employees with 3, 6 and 7 years of experiences left even after getting promoted.
   -	Employees with no promotion mostly left the job irrespective of their years of service.
 
 ### 7  Position wise attrition statistics
+![HR 7](https://github.com/Naveena-Projects/HR-Analytics/assets/156399143/151da56a-4044-4d17-b34b-1156ad330139)
   -	Data Scientists, Financial Analysts and Software Engineers exhibit high attrition, each with a count of 9 employees each. They all work more hours than the overall average and completed low-period training    except for Financial Analysts. Notably financial analysts have higher pay and training.
   -	Following closely in attrition are Financial Managers and Marketing Managers with an average experience of 6 years.
   -	Financial managers, with the highest salary of 90k, are the most satisfied employees with a satisfaction score of 4.33. In contrast, Marketing Managers, with a salary around 68k, express nominal satisfaction and training.
@@ -72,25 +77,25 @@ The source dataset exhibited inconsistencies and discrepancies, necessitating co
 ## Analysis and Insights on Training programme
 
 ### 1.	Relation between training and performance
- 
+ ![HR 8](https://github.com/Naveena-Projects/HR-Analytics/assets/156399143/958c94ed-7292-429e-8541-d9fdfd5c7835)
   -	Most employees attended around 20 hours of training.
   -	32 employees have completed 30 hours of training, but their average performance rating is still below 4. Complete training doesn't necessarily correlate with higher performance scores.
   -	Employees with performance score above 4 attended training only for 10 hours. 
   -	This clearly indicates a lack of proportionality between performance scores and the training.
 
 ### 2	Relation between training and promotion
- 
+ ![HR 9](https://github.com/Naveena-Projects/HR-Analytics/assets/156399143/d385a150-5806-439a-bfcf-4c5839ce64c4)
   -	Out of 32 Employees who completed the entire training, only 10 got promoted.
   -	Among the promoted employees, 12 had attended 25 hours of training.
   -	Notably, only one person among the least trained employees received a promotion, indicating a lower probability of promotion with minimal training.
 
 ### 3	Relation between training and attrition		
- 
+ ![HR 10](https://github.com/Naveena-Projects/HR-Analytics/assets/156399143/a95efa17-54c5-4b56-8d36-9f3c4c9f817e)
   -	Training shows an impact on attrition, with most employees trained below 20 hours are leaving in all departments except marketing. 
   -	In particular, all 6 employees in the HR department attended training below the overall average.
 
 ### 4	Training taken by different age groups
- 
+ ![HR 11](https://github.com/Naveena-Projects/HR-Analytics/assets/156399143/7494b4f2-a9c8-41f4-a043-4f9786b8af95)
   -	Both age groups have attended similar hours of training, aligning with the overall average training hours of the company
 
 ## Recommendations
