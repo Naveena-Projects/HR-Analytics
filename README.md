@@ -28,7 +28,7 @@ The source dataset exhibited inconsistencies and discrepancies, necessitating co
 ## Analysis and Insights on Attrition 
 
 ### 1  Attrition count and Attrition rate
-![HR 1](https://github.com/Naveena-Projects/HR-Analytics/assets/156399143/af56f8fa-1511-4aec-9cca-8cc12bf849e1)
+![Picture12](https://github.com/Naveena-Projects/HR-Analytics/assets/156399143/9a9b4918-3840-475a-a5d3-3b02c2cd70cc)
   -	The attrition rate of the organization is 33.75%, with the total reduction of 54 employees. 
   -	This indicates a significant challenge with more than one-third of the workforce leaving.
 
