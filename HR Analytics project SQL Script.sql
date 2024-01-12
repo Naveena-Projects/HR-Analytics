@@ -1,4 +1,4 @@
--- SQL PROJECT - NAVEENA JOSEPH JEROME
+-- SQL PROJECT - HR Analytics
 
 -- SOURCE DATA -> hrdata table
 CREATE TABLE hrdata(EmployeeID INT, Age INT ,Gender TEXT, Department TEXT, Position TEXT, 
@@ -170,10 +170,10 @@ INSERT INTO hrdata (EmployeeID, Age, Gender, Department, Position, YearsOfServic
 SELECT * FROM hrdata;
 
 /* 
-	Data inconsistencies in these columns need to be fixed
+Data inconsistencies in these columns need to be fixed
 	Gender -> M, Male, Female, F
-    Position -> DataScientist and MarketingAnalyst
-    LastPromotionDate -> Dates in 2 formats
+	Position -> DataScientist and MarketingAnalyst
+	LastPromotionDate -> Dates in 2 formats
 */
 
 -- Grouping based on age
@@ -234,12 +234,13 @@ FROM hrdata;
 
 /* Creating a new table hr_database from the hrdata table 
 	-> cleaning and fixing data inconsistencies in Gender and Position columns
-    -> creating a new AgeGroup column with 2 groups (above and below 30 years of age)
-    -> craeating a salary bucket with 3 different salary ranges 
-    -> converting the date column in text type with 2 date formats into a column with single date format of date type
+	-> creating a new AgeGroup column with 2 groups (above and below 30 years of age)
+	-> craeating a salary bucket with 3 different salary ranges 
+	-> converting the date column in text type with 2 date formats into a column with single date format of date type
 */
-DROP TABLE IF EXISTS hr_database;
+-- DROP TABLE IF EXISTS hr_database;
 
+-- Creating new table with modified data
 CREATE TABLE hr_database AS
 SELECT EmployeeID, 
 	REPLACE(REPLACE(Gender,'Female','F'),'Male','M') AS Gender,
@@ -331,12 +332,6 @@ SELECT Attrition,
 	ROUND(AVG(TrainingHours),2) AS Average_TrainingHours
 FROM hr_database
 GROUP BY Attrition;
-/*
-	# Average Working hours more than that of active employees
-    # Average Salary seems higher for employees who left -> position wise salary need to be checked
-    # Average satisfaction score is similar for all the employees
-    # training hours seems to have an impact on attrition
-*/
 
 -- relation between salary and attrition
 SELECT SalaryBucket, COUNT(*) AS Attrition_count
@@ -344,7 +339,6 @@ FROM hr_database
 WHERE Attrition= 'Yes'
 GROUP BY SalaryBucket
 ORDER BY Attrition_count DESC;
--- # higher attrtion from above 80k salary bucket
 
 -- Departmentwise attrition
 SELECT Department, COUNT(*) AS Total_employees,
@@ -354,10 +348,6 @@ SELECT Department, COUNT(*) AS Total_employees,
 FROM hr_database
 GROUP BY Department
 ORDER BY Attrition_yes_Rate DESC;
-/* 
-	# Attrition rate is the highest in Finance department followed by IT
-	# largest number of employees left from IT department followed by Finance
-*/
 
 SELECT Department, COUNT(*) AS Attrition_count,
 	ROUND(AVG(WorkHours),2) AS Average_WorkHours,
@@ -369,26 +359,6 @@ FROM hr_database
 WHERE Attrition ='Yes'
 GROUP BY Department
 ORDER BY Attrition_count DESC;
-/*
-	# IT department -> more work hours and less training
-	# Finance -> average salary and satisfaction is high; work hours is more and years of service 5.6
-	# Marketing -> Average salary and satisfaction is below overall average
-	# HR -> More work hours, less salary, low satisfaction and less training
-    # Sales -> years of service above 7 and training less than the overall average
-*/
-
-
--- Analysis on Training effectiveness
--- Comparing Training hours and attrition
-SELECT Department, Attrition, COUNT(*)
-FROM hr_database
-WHERE TrainingHours >=25
-GROUP BY Department, Attrition;
-
-SELECT MAX(TrainingHours), MIN(TrainingHours)
-FROM hr_database;
-
--- # maximum attrition trained below the average training hours 
 
 -- Age group wise attrtion   
 SELECT AgeGroup, COUNT(*) AS Attrition_count
@@ -396,7 +366,6 @@ FROM hr_database
 WHERE Attrition= 'Yes'
 GROUP BY AgeGroup
 ORDER BY Attrition_count DESC;
--- # similar attrition count in both the groups
 
 -- Positionwise attrition
 SELECT Position, COUNT(*) AS Attrition_count,
@@ -462,8 +431,15 @@ FROM hr_database
 GROUP BY YearsOfService
 ORDER BY YearsOfService DESC;
 
+-- Analysis on Training effectiveness
+-- Comparing Training hours and attrition
+SELECT Department, Attrition, COUNT(*)
+FROM hr_database
+WHERE TrainingHours >=25
+GROUP BY Department, Attrition;
 
--- Analysis on training programme
+SELECT MAX(TrainingHours), MIN(TrainingHours)
+FROM hr_database;
 
 -- Comparing performance rating and training hours
 
