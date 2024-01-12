@@ -33,6 +33,7 @@ The source dataset exhibited inconsistencies and discrepancies, necessitating co
   -	This indicates a significant challenge with more than one-third of the workforce leaving.
 
 ### 2  Comparison between attrition and non-attrition
+![HR 2](https://github.com/Naveena-Projects/HR-Analytics/assets/156399143/8b02429c-96dd-40e3-aa05-abe1cf72694d)
   -	Average work hours of employees leaving stands at 42.5 hours which is higher than the average work hours of total employees and employee that remained as well.
   -	Those employees were also have trained for as low as 18 hours and all the other employees seem to have trained for more hours.
   -	Salary alone doesn’t seem to be a major factor in attrition, requiring further analysis at different levels.
