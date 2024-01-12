@@ -39,6 +39,7 @@ The source dataset exhibited inconsistencies and discrepancies, necessitating co
   -	Salary alone doesn’t seem to be a major factor in attrition, requiring further analysis at different levels.
 
 ### 3  Attrition with respect to salary ranges
+![HR 3](https://github.com/Naveena-Projects/HR-Analytics/assets/156399143/3cdfe7a6-a318-43fd-8719-125edab899ee)
   -	This data reveals that employees with higher salary packages, specifically those in the above 80k salary bucket, exhibit higher attrition rates.
   -	Following this, the next highest salary buckets also show attrition counts of 13 each.
   -	Conversely, employees in the lowest salary range (50k to 60k) constitute only 9 out of 54, indicating minimal impact on total attrition in this category.
